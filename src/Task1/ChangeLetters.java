@@ -1,6 +1,7 @@
 package Task1;
 
 /**
+ Task 1b
  Change by places first and last letters in each second string of list or array"
  */
 public class ChangeLetters {
