@@ -6,10 +6,13 @@ import java.util.List;
 import java.util.Random;
 
 
-
+/**
+ Task 2b TO compare ArrayList and vs LinkedList
+ */
 public class MyCollections {
 
-
+// To get time necessary for performing operations
+    
         void getProcessed(List<Integer> myList1){
             Random r = new Random();
             int counter=0;

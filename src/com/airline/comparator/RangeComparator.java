@@ -4,6 +4,8 @@ import com.airline.airlineclasses.Aircraft;
 
 import java.util.Comparator;
 
+//used to compare range of the aircrafts
+
 public class RangeComparator implements Comparator<Aircraft> {
 
     public int compare(Aircraft o1, Aircraft o2){

@@ -25,7 +25,6 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException, ParserConfigurationException, SAXException {
 
         ArrayList<Aircraft> belavia = new ArrayList<Aircraft>();
-
         // add aircrafts stored as objects in file
 
         addFromFile(belavia);
@@ -34,11 +33,11 @@ public class Main {
 
         addFromDatabase(belavia);
 
-// Add elements into airline using xml document
+        // Add elements into airline using xml document
 
         addFromXmlFile(belavia);
 
-// Sort by range
+        // Sort by range
         Collections.sort(belavia, new RangeComparator());
 
         for (int i=0;i<belavia.size();i++){
@@ -53,13 +52,12 @@ public class Main {
             e.getMess();
         }
 
-/* Search by parameters*/
+// Search by parameters
 
         searchByParameters(belavia);
 
 
     }
-
     //Count Total Range of the airline
 
     public static int countRange(ArrayList<Aircraft>air) throws MyOwnException {
@@ -89,7 +87,7 @@ public class Main {
             }
         }
  */
-
+// Search by parameters
     private static void searchByParameters(ArrayList<Aircraft> belavia) {
         System.out.println("Please input min range parameter:");
         int rangePar=0;
@@ -116,7 +114,7 @@ public class Main {
           }
         }
     }
-
+    //Add from Xml File
     private static void addFromXmlFile(ArrayList<Aircraft> belavia) throws ParserConfigurationException, SAXException, IOException {
         File xmlfile = new File("D:\\Temp\\Helic.txt");
         DocumentBuilderFactory factory =  DocumentBuilderFactory.newInstance();
@@ -145,14 +143,14 @@ public class Main {
 
         }
     }
-
+// Add from Database
     private static void addFromDatabase(ArrayList<Aircraft> belavia) throws SQLException {
         String url ="jdbc:mysql://localhost:3306/retvizan";
         String user="Admin";
         String pass="Qaz1qaz1!";
         String sql="SELECT * FROM `retvizan`.`planes` where `id`= ?;";
 
-        // DriverManager.registerDriver();
+
 
         try(
                 Connection connection = DriverManager.getConnection(url,user,pass);
@@ -174,6 +172,7 @@ public class Main {
         }
     }
 
+    // Add from file, file should be created by running main in AircraftData Class
     private static void addFromFile(ArrayList<Aircraft> belavia) throws IOException, ClassNotFoundException {
         FileInputStream in = new FileInputStream("d:\\AirlineData\\data.txt");
         ObjectInputStream objin = new ObjectInputStream(in);

@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 /**
- * Created by Andrei_Shkarubski on 10/23/2018.
+ to add aircrafts to the airline and write in the file
  */
 public class AircraftData implements Serializable{
 

@@ -12,6 +12,15 @@ public class Plane extends Aircraft implements PassengerFlyable, Serializable{
 
     }
 
+    public int getPaxCapacity(){
+        return paxCapacity;
+    }
+
+    public void setPaxCapacity(int paxCapacity){
+        this.paxCapacity=paxCapacity;
+
+    }
+
     @Override
     public void passFly() {
         System.out.println("Passengers are able to fly by a plane other means are not available for flying");
